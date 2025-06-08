@@ -71,14 +71,10 @@ export default function About() {
         >
           <div className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-800/50 shadow-lg">
             <p className="text-gray-300 leading-relaxed">
-              I’m a graduating BSIT student specializing in Cybersecurity, currently serving as the Project Manager and
-              Lead Programmer of a capstone project that began in June 2024. Through this project, I gained hands-on
-              experience in software development, debugging, team coordination, and project management.
+              Hi! My name is Josef. I’m a graduating BSIT student specializing in Cybersecurity, I have experience as a Full Stack Web Developer & Operations Intern in a Pharmaceutical company and as the Project Manager and Lead Programmer of a capstone project that began in June 2024. Through this project, I gained hands-on experience in software development, debugging, team coordination, and project management.
             </p>
             <p className="text-gray-300 leading-relaxed mt-4">
-              Throughout my academic journey, I’ve applied skills from system administration, ethical hacking, and
-              software quality assurance. I also enjoy debugging, researching testing tools, and exploring new
-              technologies, and I’m eager to contribute to Koo Apps by helping deliver high-quality games.
+              Throughout my academic journey, I’ve applied skills from system administration, ethical hacking, and software quality assurance. I also enjoy debugging, researching testing tools, and exploring new technologies, and I’m eager to contribute to the industry by helping deliver high-quality systems.
             </p>
           </div>
 
