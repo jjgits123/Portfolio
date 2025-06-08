@@ -37,7 +37,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <Link
             href="/"
-            className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-200 hover:opacity-80 transition-opacity"
+            className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200 hover:opacity-80 transition-opacity"
           >
             JJ
           </Link>
@@ -48,7 +48,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-teal-400 transition-colors duration-200"
+                className="text-gray-300 hover:text-purple-400 transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -57,7 +57,10 @@ export default function Navbar() {
 
           {/* Mobile Navigation Toggle */}
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-300 hover:text-teal-400 transition-colors">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-purple-400 transition-colors"
+            >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -72,7 +75,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="block py-2 text-gray-300 hover:text-teal-400 transition-colors"
+                className="block py-2 text-gray-300 hover:text-purple-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}

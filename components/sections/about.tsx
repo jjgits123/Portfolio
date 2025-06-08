@@ -15,22 +15,22 @@ export default function About() {
 
   const quickFacts = [
     {
-      icon: <Code className="h-5 w-5 text-teal-400" />,
+      icon: <Code className="h-5 w-5 text-purple-400" />,
       title: "Software Engineer",
       description: "Passionate about clean code and innovative solutions",
     },
     {
-      icon: <Briefcase className="h-5 w-5 text-teal-400" />,
+      icon: <Briefcase className="h-5 w-5 text-purple-400" />,
       title: "Full Stack Web Developer",
       description: "Building scalable web solutions with a focus on performance and reliability",
     },
     {
-      icon: <GraduationCap className="h-5 w-5 text-teal-400" />,
+      icon: <GraduationCap className="h-5 w-5 text-purple-400" />,
       title: "Continuous Learner",
       description: "Always expanding knowledge and skills",
     },
     {
-      icon: <MapPin className="h-5 w-5 text-teal-400" />,
+      icon: <MapPin className="h-5 w-5 text-purple-400" />,
       title: "Quezon City, Philippines",
       description: "Based in the Philippines",
     },
@@ -48,7 +48,7 @@ export default function About() {
           )}
         >
           <div className="relative w-full aspect-square max-w-md mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/20 to-teal-300/20 rounded-2xl -rotate-6 transform scale-95"></div>
+            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-purple-300/20 rounded-2xl -rotate-6 transform scale-95"></div>
             <div className="absolute inset-0 bg-gray-900/80 backdrop-blur-sm rounded-2xl border border-gray-800/50"></div>
             <div className="relative h-full w-full overflow-hidden rounded-2xl">
               <Image
@@ -86,7 +86,7 @@ export default function About() {
             {quickFacts.map((fact, index) => (
               <div
                 key={index}
-                className="bg-gray-900/30 backdrop-blur-sm p-4 rounded-xl border border-gray-800/50 hover:border-teal-500/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(45,212,191,0.15)]"
+                className="bg-gray-900/30 backdrop-blur-sm p-4 rounded-xl border border-gray-800/50 hover:border-purple-500/50 transition-all duration-300 hover:shadow-[0_0_15px_rgba(168,85,247,0.15)]"
               >
                 <div className="flex items-start gap-3">
                   <div className="mt-1">{fact.icon}</div>

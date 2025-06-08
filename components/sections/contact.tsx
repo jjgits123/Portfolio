@@ -39,28 +39,28 @@ export default function Contact() {
 
   const contactInfo = [
     {
-      icon: <MapPin className="h-5 w-5 text-teal-400" />,
+      icon: <MapPin className="h-5 w-5 text-purple-400" />,
       label: "Location",
       value: "Quezon City, Philippines, 1109",
     },
     {
-      icon: <Phone className="h-5 w-5 text-teal-400" />,
+      icon: <Phone className="h-5 w-5 text-purple-400" />,
       label: "Phone",
       value: "09620855132",
     },
     {
-      icon: <Mail className="h-5 w-5 text-teal-400" />,
+      icon: <Mail className="h-5 w-5 text-purple-400" />,
       label: "Email",
       value: "josefleyton16@gmail.com",
     },
     {
-      icon: <Linkedin className="h-5 w-5 text-teal-400" />,
+      icon: <Linkedin className="h-5 w-5 text-purple-400" />,
       label: "LinkedIn",
       value: "linkedin.com/in/ayushjha23",
       link: "www.linkedin.com/in/josef-johrel-medel-131570312",
     },
     {
-      icon: <Github className="h-5 w-5 text-teal-400" />,
+      icon: <Github className="h-5 w-5 text-purple-400" />,
       label: "GitHub",
       value: "github.com/AyushRajJha",
       link: "https://github.com/jjmalupet2002?tab=overview&from=2025-06-01&to=2025-06-08",
@@ -91,7 +91,7 @@ export default function Contact() {
                         href={info.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-300 hover:text-teal-400 transition-colors"
+                        className="text-gray-300 hover:text-purple-400 transition-colors"
                       >
                         {info.value}
                       </a>
@@ -128,7 +128,7 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Your name"
                   required
-                  className="bg-gray-800/50 border-gray-700 focus:border-teal-500 focus:ring-teal-500/20"
+                  className="bg-gray-800/50 border-gray-700 focus:border-purple-500 focus:ring-purple-500/20"
                 />
               </div>
               <div>
@@ -143,7 +143,7 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Your email"
                   required
-                  className="bg-gray-800/50 border-gray-700 focus:border-teal-500 focus:ring-teal-500/20"
+                  className="bg-gray-800/50 border-gray-700 focus:border-purple-500 focus:ring-purple-500/20"
                 />
               </div>
               <div>
@@ -157,12 +157,12 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Your message"
                   required
-                  className="bg-gray-800/50 border-gray-700 focus:border-teal-500 focus:ring-teal-500/20 min-h-[120px]"
+                  className="bg-gray-800/50 border-gray-700 focus:border-purple-500 focus:ring-purple-500/20 min-h-[120px]"
                 />
               </div>
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-teal-500 to-teal-400 text-gray-900 hover:shadow-[0_0_15px_rgba(45,212,191,0.5)] transition-all duration-300"
+                className="w-full bg-gradient-to-r from-purple-500 to-purple-400 text-gray-900 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all duration-300"
               >
                 <Send className="h-4 w-4 mr-2" />
                 Send Message

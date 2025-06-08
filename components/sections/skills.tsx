@@ -44,7 +44,7 @@ export default function Skills() {
           <div
             key={index}
             className={cn(
-              "bg-gray-900/30 backdrop-blur-sm border border-gray-800/50 rounded-xl p-6 hover:border-teal-500/50 transition-all duration-500 opacity-0 transform translate-y-8",
+              "bg-gray-900/30 backdrop-blur-sm border border-gray-800/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-500 opacity-0 transform translate-y-8",
               mounted && "opacity-100 translate-y-0",
               mounted && `transition-delay-${index * 100}`,
             )}
@@ -54,7 +54,7 @@ export default function Skills() {
           >
             <div className="flex flex-col h-full">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-gray-800/50 rounded-lg text-teal-400">{category.icon}</div>
+                <div className="p-2 bg-gray-800/50 rounded-lg text-purple-400">{category.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-200">{category.title}</h3>
               </div>
 
@@ -63,7 +63,7 @@ export default function Skills() {
                   {category.skills.map((skill, skillIndex) => (
                     <li
                       key={skillIndex}
-                      className="bg-gray-800/30 px-4 py-2 rounded-lg border border-gray-700/50 hover:border-teal-500/30 hover:shadow-[0_0_10px_rgba(45,212,191,0.15)] transition-all duration-300"
+                      className="bg-gray-800/30 px-4 py-2 rounded-lg border border-gray-700/50 hover:border-purple-500/30 hover:shadow-[0_0_10px_rgba(168,85,247,0.15)] transition-all duration-300"
                     >
                       <span className="text-gray-300">{skill}</span>
                     </li>

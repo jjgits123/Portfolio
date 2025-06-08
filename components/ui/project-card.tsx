@@ -55,7 +55,9 @@ export default function ProjectCard({
       <div className="p-6 flex flex-col h-full">
         <div className="mb-4">
           <div className="flex justify-between items-start mb-2">
-            <h3 className="text-xl font-semibold text-gray-200 group-hover:text-teal-400 transition-colors">{title}</h3>
+            <h3 className="text-xl font-semibold text-gray-200 group-hover:text-purple-400 transition-colors">
+              {title}
+            </h3>
             <span className="text-sm text-gray-500">{date}</span>
           </div>
           <p className="text-gray-400 mb-4">{description}</p>
@@ -81,7 +83,7 @@ export default function ProjectCard({
                 e.stopPropagation()
                 window.open(demoUrl, "_blank", "noopener,noreferrer")
               }}
-              className="flex items-center gap-1 text-sm text-teal-400 hover:text-teal-300 transition-colors"
+              className="flex items-center gap-1 text-sm text-purple-400 hover:text-purple-300 transition-colors"
             >
               <ExternalLink size={16} />
               <span>Live Demo</span>
@@ -93,7 +95,7 @@ export default function ProjectCard({
                 e.stopPropagation()
                 window.open(codeUrl, "_blank", "noopener,noreferrer")
               }}
-              className="flex items-center gap-1 text-sm text-teal-400 hover:text-teal-300 transition-colors"
+              className="flex items-center gap-1 text-sm text-purple-400 hover:text-purple-300 transition-colors"
             >
               <Github size={16} />
               <span>View Code</span>
@@ -103,7 +105,7 @@ export default function ProjectCard({
       </div>
       <div
         className={cn(
-          "h-1 bg-gradient-to-r from-teal-500 to-teal-300 transition-all duration-500 transform origin-left",
+          "h-1 bg-gradient-to-r from-purple-500 to-purple-300 transition-all duration-500 transform origin-left",
           isHovered ? "scale-x-100" : "scale-x-0",
         )}
       ></div>

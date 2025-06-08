@@ -200,7 +200,7 @@ function GalleryCarousel({ images, descriptions }: { images: string[]; descripti
 
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-semibold text-teal-400">Project Gallery</h2>
+      <h2 className="text-2xl font-semibold text-purple-400">Project Gallery</h2>
 
       <div className="bg-gray-900/30 backdrop-blur-sm border border-gray-800/50 rounded-xl overflow-hidden">
         {/* Main Image Display */}
@@ -216,7 +216,7 @@ function GalleryCarousel({ images, descriptions }: { images: string[]; descripti
           {/* Navigation Arrows */}
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-900/70 backdrop-blur-sm text-teal-400 p-2 rounded-full hover:bg-gray-800/70 transition-colors"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-900/70 backdrop-blur-sm text-purple-400 p-2 rounded-full hover:bg-gray-800/70 transition-colors"
             aria-label="Previous image"
           >
             <ChevronLeft className="h-6 w-6" />
@@ -224,7 +224,7 @@ function GalleryCarousel({ images, descriptions }: { images: string[]; descripti
 
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-900/70 backdrop-blur-sm text-teal-400 p-2 rounded-full hover:bg-gray-800/70 transition-colors"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-900/70 backdrop-blur-sm text-purple-400 p-2 rounded-full hover:bg-gray-800/70 transition-colors"
             aria-label="Next image"
           >
             <ChevronRight className="h-6 w-6" />
@@ -250,7 +250,7 @@ function GalleryCarousel({ images, descriptions }: { images: string[]; descripti
                 onClick={() => goToSlide(index)}
                 className={cn(
                   "w-3 h-3 rounded-full transition-all duration-300",
-                  currentIndex === index ? "bg-teal-400 scale-110" : "bg-gray-600 hover:bg-gray-500",
+                  currentIndex === index ? "bg-purple-400 scale-110" : "bg-gray-600 hover:bg-gray-500",
                 )}
                 aria-label={`Go to image ${index + 1}`}
               />
@@ -266,14 +266,14 @@ function GalleryCarousel({ images, descriptions }: { images: string[]; descripti
 function FeaturesSection({ features }: { features: any[] }) {
   return (
     <div className="bg-gray-900/30 backdrop-blur-sm border border-gray-800/50 rounded-xl p-6">
-      <h2 className="text-2xl font-semibold mb-6 text-teal-400">Key Features</h2>
+      <h2 className="text-2xl font-semibold mb-6 text-purple-400">Key Features</h2>
       <div className="grid md:grid-cols-2 gap-4">
         {features.map((feature, index) => (
           <div
             key={index}
-            className="flex items-start gap-3 p-4 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-teal-500/30 hover:shadow-[0_0_10px_rgba(45,212,191,0.15)] transition-all duration-300"
+            className="flex items-start gap-3 p-4 bg-gray-800/30 rounded-lg border border-gray-700/50 hover:border-purple-500/30 hover:shadow-[0_0_10px_rgba(168,85,247,0.15)] transition-all duration-300"
           >
-            <div className="text-teal-400 mt-1">{feature.icon}</div>
+            <div className="text-purple-400 mt-1">{feature.icon}</div>
             <div>
               <h3 className="font-medium text-gray-200 mb-1">{feature.title}</h3>
               <p className="text-sm text-gray-400">{feature.description}</p>
@@ -312,7 +312,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
       <div className="container mx-auto px-4 py-20 relative z-10">
         <Button
           variant="ghost"
-          className="mb-8 text-teal-400 hover:text-teal-300 hover:bg-gray-800/50"
+          className="mb-8 text-purple-400 hover:text-purple-300 hover:bg-gray-800/50"
           onClick={() => router.back()}
         >
           <ArrowLeft className="mr-2 h-4 w-4" /> Back to Projects
@@ -321,7 +321,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
         <div className="space-y-12">
           {/* Project Title */}
           <div className="text-center">
-            <h1 className="text-3xl md:text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-200">
+            <h1 className="text-3xl md:text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200">
               {project.title}
             </h1>
             <p className="text-gray-400">{project.date}</p>
@@ -342,7 +342,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
 
           {/* Project Description */}
           <div className="bg-gray-900/30 backdrop-blur-sm border border-gray-800/50 rounded-xl p-6">
-            <h2 className="text-2xl font-semibold mb-4 text-teal-400">Project Overview</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-purple-400">Project Overview</h2>
             <div className="text-gray-300 space-y-4">
               {project.longDescription.split("\n\n").map((paragraph: string, i: number) => (
                 <p key={i}>{paragraph}</p>
@@ -355,7 +355,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-colors"
+                className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
               >
                 <Github className="h-5 w-5" />
                 <span>View on GitHub</span>
@@ -368,7 +368,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
 
           {/* Client Section */}
           <div className="bg-gray-900/30 backdrop-blur-sm border border-gray-800/50 rounded-xl p-6">
-            <h2 className="text-2xl font-semibold mb-4 text-teal-400">Client</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-purple-400">Client</h2>
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="w-full md:w-1/3">
                 <div className="bg-white p-4 rounded-lg border border-gray-800/50">
@@ -396,12 +396,12 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
 
           {/* Project Stack */}
           <div className="bg-gray-900/30 backdrop-blur-sm border border-gray-800/50 rounded-xl p-6">
-            <h2 className="text-2xl font-semibold mb-4 text-teal-400">Project Stack</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-purple-400">Project Stack</h2>
             <div className="flex flex-wrap gap-3">
               {project.stack.map((tech: string, index: number) => (
                 <span
                   key={index}
-                  className="bg-gray-800/70 text-gray-300 px-3 py-2 rounded-lg border border-gray-700/50 hover:border-teal-500/30 hover:shadow-[0_0_10px_rgba(45,212,191,0.15)] transition-all duration-300"
+                  className="bg-gray-800/70 text-gray-300 px-3 py-2 rounded-lg border border-gray-700/50 hover:border-purple-500/30 hover:shadow-[0_0_10px_rgba(168,85,247,0.15)] transition-all duration-300"
                 >
                   {tech}
                 </span>
@@ -415,7 +415,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
           {/* Call to Action */}
           <div className="flex justify-center pt-8">
             <Button
-              className="bg-gradient-to-r from-teal-500 to-teal-400 text-gray-900 hover:shadow-[0_0_15px_rgba(45,212,191,0.5)] transition-all duration-300"
+              className="bg-gradient-to-r from-purple-500 to-purple-400 text-gray-900 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all duration-300"
               onClick={() => router.back()}
             >
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to All Projects
