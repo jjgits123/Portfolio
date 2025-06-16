@@ -44,7 +44,7 @@ export default function Hero() {
             View Projects
           </Link>
           <a
-            href="/files/ayush-raj-jha-cv.pdf"
+            href="/files/josef-johrel-medel-cv.pdf"
             download
             className="inline-flex items-center gap-2 bg-gray-800/50 text-purple-400 border border-purple-500/30 font-medium px-6 py-3 rounded-full hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all duration-300"
           >

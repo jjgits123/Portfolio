@@ -20,6 +20,13 @@ import {
   Shield,
   BarChart2,
   Code,
+  Zap,
+  TrendingUp,
+  Edit3,
+  MessageCircle,
+  Settings,
+  UserCheck,
+  ExternalLink,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -159,24 +166,63 @@ const projectsData = [
       "RepMind revolutionizes the fitness app landscape by leveraging AI to provide personalized workout guidance. Unlike traditional workout apps that offer generic plans, RepMind uses Gemini AI to analyze user goals, fitness levels, and progress data to create truly customized workout routines. The app learns from user feedback and adapts plans accordingly, providing an experience similar to having a personal trainer.\n\nThe interface is intentionally minimalist, focusing on usability rather than overwhelming users with unnecessary features. The AI coach provides real-time feedback on workout form (when used with camera permissions), suggests appropriate weight progressions, and adjusts routines based on user recovery and performance.\n\nThe app includes features such as workout logging, progress tracking with visual charts, and AI-generated insights that help users understand their fitness journey. The recommendation engine suggests exercises based on available equipment, fitness goals, and user preferences, making it accessible for home workouts as well as gym sessions.",
     videoUrl: "https://youtu.be/oOecBPA6JKk",
     githubUrl: "https://github.com/josef/repmind-ai",
-    stack: ["React", "Bootstrap", "Figma", "JavaScript", "Node.js", "Express", "MongoDB", "Gemini AI API"],
+    webAppUrl: "https://rep-mind.vercel.app/",
+    stack: ["Next.js", "Tailwind", "Zustand", "Supabase", "Prisma", "NextAuth", "Gemini", "Vercel"],
     clientImage: "/placeholder.svg?height=200&width=400",
     clientName: "Personal Project",
     gallery: [
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
+      "/images/repmind/workout-routines.png",
+      "/images/repmind/dashboard-welcome.png",
+      "/images/repmind/workout-timer.png",
+      "/images/repmind/weekly-planner.png",
+      "/images/repmind/onboarding-chat.png",
+      "/images/repmind/ai-chat-assistant.png",
     ],
     galleryDescriptions: [
-      "Dashboard - AI-powered workout recommendations and progress overview",
-      "Workout Planner - Customized exercise routines based on user goals",
-      "Exercise Library - Comprehensive database with form instructions",
-      "Progress Tracking - Visual charts showing fitness improvements over time",
-      "AI Coach Interface - Personalized guidance and form feedback",
-      "Settings & Profile - User preferences and fitness goal configuration",
+      "Workout Routines - Clean interface showing today's routine and workout library with search and filtering options",
+      "Dashboard Welcome - Personalized dashboard with motivational insights, weekly split overview, and progress tracking",
+      "Workout Timer - Minimalist set timer interface for tracking workout sessions with clear visual feedback",
+      "Weekly Planner - Interactive weekly workout split planner with routine scheduling and management features",
+      "Onboarding Chat - Personalized AI-powered onboarding flow that learns user goals, fitness level, and equipment preferences",
+      "AI Chat Assistant - Floating Gemini AI coach providing contextual workout advice and real-time routine adjustments",
+    ],
+    features: [
+      {
+        icon: <Zap className="h-6 w-6" />,
+        title: "AI-Powered Workout Generator",
+        description:
+          "Gemini creates personalized routines based on your goals, experience, and available equipment — no setup required.",
+      },
+      {
+        icon: <TrendingUp className="h-6 w-6" />,
+        title: "Smart Progression Tracking",
+        description:
+          "The app detects plateaus and nudges users with timely workout modifications or exercise swaps to keep progress steady.",
+      },
+      {
+        icon: <Edit3 className="h-6 w-6" />,
+        title: "Minimalist Workout Logging",
+        description:
+          "Track sets, reps, and weights with a clean interface, enhanced by contextual AI tips and automatic workout summaries.",
+      },
+      {
+        icon: <MessageCircle className="h-6 w-6" />,
+        title: "Floating Gemini Coach",
+        description:
+          "A non-intrusive assistant chat floats across all pages, offering contextual advice, generating plans, and adjusting routines in real time.",
+      },
+      {
+        icon: <Settings className="h-6 w-6" />,
+        title: "Interactive Routine Builder",
+        description:
+          "Users can manually build, reorder, and complete workouts — or let Gemini adapt them instantly using structured feedback.",
+      },
+      {
+        icon: <UserCheck className="h-6 w-6" />,
+        title: "Personalized Onboarding via Chat",
+        description:
+          "Gemini's initial conversation learns about your goals and limitations, then instantly delivers a starter plan tailored just for you.",
+      },
     ],
     date: "Jun 2025",
   },
@@ -349,8 +395,8 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
               ))}
             </div>
 
-            {/* GitHub Link */}
-            <div className="mt-6 pt-4 border-t border-gray-800/50">
+            {/* Links Section */}
+            <div className="mt-6 pt-4 border-t border-gray-800/50 flex flex-wrap gap-4">
               <a
                 href={project.githubUrl}
                 target="_blank"
@@ -360,6 +406,17 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
                 <Github className="h-5 w-5" />
                 <span>View on GitHub</span>
               </a>
+              {project.webAppUrl && (
+                <a
+                  href={project.webAppUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+                >
+                  <ExternalLink className="h-5 w-5" />
+                  <span>Web App Link</span>
+                </a>
+              )}
             </div>
           </div>
 
