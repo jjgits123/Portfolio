@@ -2,6 +2,7 @@ import Navbar from "@/components/ui/navbar"
 import Hero from "@/components/sections/hero"
 import About from "@/components/sections/about"
 import Skills from "@/components/sections/skills"
+import WorkExperience from "@/components/sections/work-experience"
 import Projects from "@/components/sections/projects"
 import Achievements from "@/components/sections/achievements"
 import Contact from "@/components/sections/contact"
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
+        <WorkExperience />
         <Projects />
         <Achievements />
         <Contact />
