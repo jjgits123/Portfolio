@@ -46,6 +46,17 @@ export default function Projects() {
       codeUrl: "#",
       imageSrc: "/images/conversational-ai.png",
     },
+    {
+      id: "movie-sentiment-classifier",
+      title: "Movie Review Sentiment Classifier",
+      description:
+        "A Python-based machine learning tool to classify movie reviews into sentiments (positive or negative). The tool leverages text preprocessing, feature engineering, and supervised learning with scikit-learn classifiers. Applied Software Quality Assurance (SQA) techniques, including unit tests and system validation.",
+      date: "December 2024",
+      techStack: ["Python", "scikit-learn", "pandas", "numpy", "nltk", "matplotlib"],
+      demoUrl: "#",
+      codeUrl: "#",
+      imageSrc: "/images/python-logo.jpeg",
+    },
   ]
 
   return (

@@ -27,6 +27,10 @@ import {
   Settings,
   UserCheck,
   ExternalLink,
+  Database,
+  TestTube,
+  Activity,
+  PieChart,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -225,6 +229,68 @@ const projectsData = [
       },
     ],
     date: "Jun 2025",
+  },
+  {
+    id: "movie-sentiment-classifier",
+    title: "Movie Review Sentiment Classifier",
+    description:
+      "A Python-based machine learning tool to classify movie reviews into sentiments (positive or negative). The tool leverages text preprocessing, feature engineering, and supervised learning with scikit-learn classifiers. Applied Software Quality Assurance (SQA) techniques, including unit tests and system validation.",
+    longDescription:
+      "This machine learning project demonstrates the application of natural language processing and supervised learning techniques to classify movie reviews by sentiment. The system processes raw text data through comprehensive preprocessing pipelines, including text cleaning, tokenization, stemming, and vectorization using TF-IDF and bag-of-words approaches.\n\nThe project implements multiple classification algorithms including Naive Bayes, Support Vector Machines, and Logistic Regression, with comprehensive model evaluation using cross-validation, confusion matrices, and performance metrics. Feature engineering techniques are applied to extract meaningful patterns from text data, while hyperparameter tuning optimizes model performance.\n\nA key focus of this project was implementing Software Quality Assurance practices throughout the development lifecycle. This included comprehensive unit testing for all modules, integration testing for the complete pipeline, and system validation to ensure reliable performance. The codebase follows modular design principles with clear separation of concerns, making it maintainable and extensible for future enhancements.",
+    videoUrl: "https://youtu.be/oOecBPA6JKk",
+    githubUrl: "https://github.com/jjmalupet2002/movie-review-sentiment-classifier",
+    stack: ["Python", "scikit-learn", "pandas", "numpy", "nltk", "matplotlib", "seaborn", "joblib", "unittest"],
+    clientImage: "/images/python-logo.jpeg",
+    clientName: "Academic Project",
+    gallery: [
+      "/images/movie-sentiment/unit-tests.png",
+      "/images/movie-sentiment/naive-bayes-results.png",
+      "/images/movie-sentiment/logistic-regression-results.png",
+      "/images/movie-sentiment/logreg-confusion-matrix.png",
+      "/images/movie-sentiment/nb-confusion-matrix.png",
+      "/images/movie-sentiment/text-preprocessing.png",
+    ],
+    galleryDescriptions: [
+      "Unit Testing Framework - Terminal output showing successful execution of preprocessing unit tests with 3 tests completed in 0.002s, demonstrating SQA implementation",
+      "Naive Bayes Classification Results - Performance metrics showing 84.74% accuracy with detailed precision, recall, and F1-score breakdown for positive/negative sentiment classification",
+      "Logistic Regression Performance - Superior results with 89.04% accuracy, displaying comprehensive classification report with precision, recall, and F1-score metrics for both sentiment classes",
+      "Logistic Regression Confusion Matrix - Visual heatmap showing classification performance with 4351 true negatives, 4553 true positives, and minimal false classifications",
+      "Naive Bayes Confusion Matrix - Heatmap visualization displaying model performance with 4183 true negatives, 4291 true positives, showing slightly higher misclassification rates",
+      "Text Preprocessing Pipeline - Complete workflow showing original movie review text, cleaned version, stemmed output, and feature matrix dimensions (50000, 5000) for ML processing",
+    ],
+    features: [
+      {
+        icon: <Database className="h-6 w-6" />,
+        title: "Text Preprocessing Pipeline",
+        description: "Comprehensive text cleaning, stemming, and vectorization using NLTK and scikit-learn",
+      },
+      {
+        icon: <Brain className="h-6 w-6" />,
+        title: "Multiple ML Algorithms",
+        description: "Implementation of Naive Bayes, SVM, and Logistic Regression with performance comparison",
+      },
+      {
+        icon: <TestTube className="h-6 w-6" />,
+        title: "Software Quality Assurance",
+        description: "Comprehensive unit testing, integration testing, and system validation practices",
+      },
+      {
+        icon: <Activity className="h-6 w-6" />,
+        title: "Model Evaluation",
+        description: "Cross-validation, confusion matrices, and detailed performance metrics analysis",
+      },
+      {
+        icon: <PieChart className="h-6 w-6" />,
+        title: "Data Visualization",
+        description: "Interactive charts and plots using matplotlib and seaborn for insights visualization",
+      },
+      {
+        icon: <Code className="h-6 w-6" />,
+        title: "Modular Architecture",
+        description: "Clean, maintainable code structure with proper documentation and requirements management",
+      },
+    ],
+    date: "December 2024",
   },
 ]
 
@@ -445,7 +511,9 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
                     ? "This capstone project was developed as part of the academic curriculum at the Technological Institute of the Philippines, showcasing the integration of educational technology with interactive gaming to enhance learning outcomes in reading comprehension."
                     : project.id === "company-services"
                       ? "This enterprise platform was developed for The Cathay Drug Company, Inc., a leading pharmaceutical company in the Philippines. The project showcases our ability to deliver high-quality, scalable solutions tailored to complex business requirements in the healthcare industry."
-                      : `This project was developed for ${project.clientName}, showcasing our ability to deliver high-quality solutions tailored to specific client needs.`}
+                      : project.id === "movie-sentiment-classifier"
+                        ? "This machine learning project was developed as part of academic coursework, demonstrating proficiency in natural language processing, supervised learning, and software quality assurance practices. The project showcases the application of industry-standard ML techniques to real-world text classification problems."
+                        : `This project was developed for ${project.clientName}, showcasing our ability to deliver high-quality solutions tailored to specific client needs.`}
                 </p>
               </div>
             </div>
