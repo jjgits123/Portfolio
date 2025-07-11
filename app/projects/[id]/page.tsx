@@ -374,7 +374,7 @@ const projectsData = [
     longDescription:
       "This penetration testing project demonstrates practical exploitation of web application vulnerabilities through Shell Upload and Stored Cross-Site Scripting (XSS) attacks. The target system was a website named HealHub, hosted on InfinityFree. The attacks focused on the Contact Form and Admin Page, exposing the risks of improper input validation and insecure file upload mechanisms.\n\nThe project involved multiple attack vectors including reverse shell upload through vulnerable file upload functionality, remote command execution on the target server, and stored XSS attacks to steal administrative session cookies. Through careful reconnaissance and exploitation, the project demonstrated how attackers can gain unauthorized access to sensitive administrative functions.\n\nThis ethical hacking exercise highlighted the critical importance of secure coding practices, proper input sanitization, and robust access controls to protect web applications from common but severe security threats. The findings provide valuable insights for developers and security professionals on implementing effective security measures.",
     videoUrl: "https://youtu.be/hDw7Zkefdpw",
-    githubUrl: "https://github.com/josef/healhub-pentest",
+    githubUrl: "https://www.canva.com/design/DAGYlrvMgWk/5XCjkijwl3ogWKq2z1BLug/view?utm_content=DAGYlrvMgWk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he1e108254f",
     stack: ["PHP", "JavaScript", "Netcat", "Kali Linux", "Reverse Shells", "XSS", "InfinityFree", "revshells.com"],
     clientImage: "/images/enigmatika/tip-logo.jpeg",
     clientName: "Technological Institute of the Philippines",
