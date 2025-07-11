@@ -31,6 +31,12 @@ import {
   TestTube,
   Activity,
   PieChart,
+  Bug,
+  Lock,
+  AlertTriangle,
+  Terminal,
+  Eye,
+  Upload,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -292,6 +298,141 @@ const projectsData = [
     ],
     date: "December 2024",
   },
+  {
+    id: "barangay-blueteam",
+    title: "Strengthening Application Security: Blue Team Mitigation Strategies for Barangay Management System",
+    description:
+      "A comprehensive blue team cybersecurity project focused on evaluating and improving the security posture of a Barangay Management System. Conducted vulnerability assessments, simulated attacks, and implemented defensive mitigation strategies including CSRF protection and brute force prevention mechanisms.",
+    longDescription:
+      "This project focused on evaluating and improving the security posture of the Barangay Management System, a web-based platform designed to streamline certificate requests and approvals between citizens, zone leaders, and barangay officials. Through simulated attacks, we identified critical vulnerabilities in the authentication and form-handling functionalities.\n\nThe project involved conducting targeted penetration testing on key features such as login authentication and dashboard modals, followed by implementing comprehensive blue team mitigation strategies. We simulated brute force attacks to evaluate login security and conducted Cross-Site Request Forgery (CSRF) assessments to test the system's resilience against unauthorized form submissions.\n\nDefensive countermeasures were then designed and implemented, including CSRF token integration for all form submissions, failed login monitoring with IP-based tracking, and session termination after consecutive failed attempts. The project concluded with thorough verification and retesting to ensure the implemented countermeasures effectively blocked unauthorized actions and improved the overall security posture of the system.",
+    videoUrl: "https://youtu.be/oOecBPA6JKk",
+    githubUrl: "https://github.com/josef/barangay-blueteam-security",
+    stack: ["PHP", "MySQL", "JavaScript", "CSRF Tokens", "Session Management", "IP Tracking", "Security Headers"],
+    clientImage: "/images/enigmatika/tip-logo.jpeg",
+    clientName: "Technological Institute of the Philippines",
+    gallery: [
+      "/images/barangay-blueteam/login-comparison.png",
+      "/images/barangay-blueteam/brute-force-mitigation.png",
+      "/images/barangay-blueteam/csrf-token-generation.png",
+      "/images/barangay-blueteam/dashboard-interface.png",
+      "/images/barangay-blueteam/csrf-form-protection.png",
+      "/images/barangay-blueteam/exponential-backoff.png",
+    ],
+    galleryDescriptions: [
+      "System Comparison - Side-by-side view of the original vulnerable login interface versus the security-hardened version with improved authentication mechanisms",
+      "Brute Force Protection Implementation - PHP code showing IP address tracking and lockout logic that automatically blocks users after multiple failed login attempts",
+      "CSRF Token Generation - Server-side PHP implementation of CSRF protection using secure random token generation with bin2hex(random_bytes(32)) for form validation",
+      "Barangay Management Dashboard - Secure dashboard interface displaying resident records with proper access controls and session management protections",
+      "CSRF Form Integration - HTML form structure and PHP validation code showing hidden CSRF token fields and server-side validation logic for preventing unauthorized requests",
+      "Exponential Backoff Implementation - Advanced brute force mitigation using exponential delay mechanisms that increase wait times based on the number of failed login attempts",
+    ],
+    features: [
+      {
+        icon: <Shield className="h-6 w-6" />,
+        title: "Vulnerability Assessment & Exploitation Simulation",
+        description:
+          "Conducted targeted penetration testing on login authentication and dashboard modals to identify security weaknesses",
+      },
+      {
+        icon: <AlertTriangle className="h-6 w-6" />,
+        title: "Brute Force Attack Simulation",
+        description:
+          "Simulated repeated password guessing attempts to evaluate login security and identify authentication vulnerabilities",
+      },
+      {
+        icon: <Bug className="h-6 w-6" />,
+        title: "Cross-Site Request Forgery (CSRF) Testing",
+        description:
+          "Assessed system resilience against unauthorized form submissions by authenticated users through CSRF attack simulation",
+      },
+      {
+        icon: <Lock className="h-6 w-6" />,
+        title: "CSRF Token Protection Implementation",
+        description:
+          "Integrated secure CSRF tokens in all form submissions to validate legitimate requests and prevent unauthorized actions",
+      },
+      {
+        icon: <Eye className="h-6 w-6" />,
+        title: "Failed Login Monitoring System",
+        description:
+          "Implemented IP-based tracking and session management to monitor and respond to suspicious login activities",
+      },
+      {
+        icon: <Terminal className="h-6 w-6" />,
+        title: "Session Termination & Exponential Backoff",
+        description:
+          "Configured automatic session termination after 5 failed attempts with exponential delay mechanisms for enhanced security",
+      },
+    ],
+    date: "November 2023",
+  },
+  {
+    id: "healhub-pentest",
+    title: "Exploiting Insecure Input Handling: Shell Upload & Stored XSS Attacks on HealHub",
+    description:
+      "A comprehensive penetration testing project demonstrating practical exploitation of web application vulnerabilities through Shell Upload and Stored Cross-Site Scripting (XSS) attacks. Exposed critical security flaws in input validation and file upload mechanisms, highlighting the importance of secure coding practices.",
+    longDescription:
+      "This penetration testing project demonstrates practical exploitation of web application vulnerabilities through Shell Upload and Stored Cross-Site Scripting (XSS) attacks. The target system was a website named HealHub, hosted on InfinityFree. The attacks focused on the Contact Form and Admin Page, exposing the risks of improper input validation and insecure file upload mechanisms.\n\nThe project involved multiple attack vectors including reverse shell upload through vulnerable file upload functionality, remote command execution on the target server, and stored XSS attacks to steal administrative session cookies. Through careful reconnaissance and exploitation, the project demonstrated how attackers can gain unauthorized access to sensitive administrative functions.\n\nThis ethical hacking exercise highlighted the critical importance of secure coding practices, proper input sanitization, and robust access controls to protect web applications from common but severe security threats. The findings provide valuable insights for developers and security professionals on implementing effective security measures.",
+    videoUrl: "https://youtu.be/hDw7Zkefdpw",
+    githubUrl: "https://github.com/josef/healhub-pentest",
+    stack: ["PHP", "JavaScript", "Netcat", "Kali Linux", "Reverse Shells", "XSS", "InfinityFree", "revshells.com"],
+    clientImage: "/images/enigmatika/tip-logo.jpeg",
+    clientName: "Technological Institute of the Philippines",
+    gallery: [
+      "/images/healhub-pentest/reverse-shell-generator.png",
+      "/images/healhub-pentest/vulnerable-contact-form.png",
+      "/images/healhub-pentest/admin-dashboard-access.png",
+      "/images/healhub-pentest/reverse-shell-access.png",
+      "/images/healhub-pentest/netcat-cookie-capture.png",
+      "/images/healhub-pentest/cookie-stealing-xss.png",
+      "/images/healhub-pentest/healhub-contact-interface.png",
+      "/images/healhub-pentest/shell-directory-listing.png",
+    ],
+    galleryDescriptions: [
+      "Reverse Shell Generator - Using revshells.com to generate PHP reverse shell payload with custom IP and port configuration for remote access",
+      "Vulnerable Contact Form - HealHub contact form showing file upload functionality without proper validation, allowing malicious file uploads",
+      "Admin Dashboard Access - Successful unauthorized access to HealHub admin panel showing 'MANAGE UNREAD QUERIES' interface after cookie theft",
+      "Remote Command Execution - Web-based shell interface showing successful file directory listing and remote command execution capabilities",
+      "Cookie Capture via Netcat - Terminal showing netcat listener capturing stolen session cookies through XSS payload execution",
+      "XSS Cookie Stealing - Browser developer tools displaying stolen PHPSESSID cookie captured through malicious JavaScript payload",
+      "HealHub Target Interface - Clean contact form interface of the target application showing the attack surface for exploitation",
+      "Shell File Listing - Directory listing showing uploaded shell files and other PHP scripts demonstrating successful file upload exploitation",
+    ],
+    features: [
+      {
+        icon: <Upload className="h-6 w-6" />,
+        title: "Reverse Shell Upload Exploit",
+        description:
+          "Generated PHP reverse shell using revshells.com and uploaded via vulnerable contact form without validation",
+      },
+      {
+        icon: <Terminal className="h-6 w-6" />,
+        title: "Remote Command Execution",
+        description: "Executed system commands remotely including file listing, system info, and process management",
+      },
+      {
+        icon: <Bug className="h-6 w-6" />,
+        title: "Stored XSS Attack",
+        description: "Crafted malicious JavaScript payload to steal session cookies via contact form submission",
+      },
+      {
+        icon: <Eye className="h-6 w-6" />,
+        title: "Cookie Theft & Capture",
+        description: "Used netcat listener to capture admin cookies and demonstrate session hijacking techniques",
+      },
+      {
+        icon: <Lock className="h-6 w-6" />,
+        title: "Authentication Bypass",
+        description: "Gained unauthorized admin access using stolen cookies without legitimate authentication",
+      },
+      {
+        icon: <AlertTriangle className="h-6 w-6" />,
+        title: "Security Vulnerability Assessment",
+        description: "Comprehensive analysis of input validation flaws and insecure file upload mechanisms",
+      },
+    ],
+    date: "September 2024",
+  },
 ]
 
 // Gallery Carousel Component
@@ -513,7 +654,9 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
                       ? "This enterprise platform was developed for The Cathay Drug Company, Inc., a leading pharmaceutical company in the Philippines. The project showcases our ability to deliver high-quality, scalable solutions tailored to complex business requirements in the healthcare industry."
                       : project.id === "movie-sentiment-classifier"
                         ? "This machine learning project was developed as part of academic coursework, demonstrating proficiency in natural language processing, supervised learning, and software quality assurance practices. The project showcases the application of industry-standard ML techniques to real-world text classification problems."
-                        : `This project was developed for ${project.clientName}, showcasing our ability to deliver high-quality solutions tailored to specific client needs.`}
+                        : project.id === "healhub-pentest"
+                          ? "This ethical hacking project was conducted as part of cybersecurity coursework, demonstrating practical penetration testing skills and vulnerability assessment techniques. The project showcases responsible disclosure practices and the importance of secure coding in web application development."
+                          : `This project was developed for ${project.clientName}, showcasing our ability to deliver high-quality solutions tailored to specific client needs.`}
                 </p>
               </div>
             </div>

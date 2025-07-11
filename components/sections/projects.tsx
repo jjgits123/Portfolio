@@ -57,6 +57,28 @@ export default function Projects() {
       codeUrl: "#",
       imageSrc: "/images/python-logo.jpeg",
     },
+    {
+      id: "barangay-blueteam",
+      title: "Strengthening Application Security: Blue Team Mitigation Strategies for Barangay Management System",
+      description:
+        "A comprehensive blue team cybersecurity project focused on evaluating and improving the security posture of a Barangay Management System. Conducted vulnerability assessments, simulated attacks, and implemented defensive mitigation strategies including CSRF protection and brute force prevention mechanisms.",
+      date: "November 2023",
+      techStack: ["PHP", "MySQL", "JavaScript", "CSRF Tokens", "Session Management"],
+      demoUrl: "#",
+      codeUrl: "#",
+      imageSrc: "/images/barangay-blueteam/login-comparison.png",
+    },
+    {
+      id: "healhub-pentest",
+      title: "Exploiting Insecure Input Handling: Shell Upload & Stored XSS Attacks on HealHub",
+      description:
+        "A comprehensive penetration testing project demonstrating practical exploitation of web application vulnerabilities through Shell Upload and Stored Cross-Site Scripting (XSS) attacks. Exposed critical security flaws in input validation and file upload mechanisms, highlighting the importance of secure coding practices.",
+      date: "September 2025",
+      techStack: ["PHP", "JavaScript", "Netcat", "Kali Linux", "Reverse Shells", "XSS"],
+      demoUrl: "#",
+      codeUrl: "#",
+      imageSrc: "/images/healhub-pentest/reverse-shell-access.png",
+    },
   ]
 
   return (
