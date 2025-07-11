@@ -112,6 +112,8 @@ const projectsData = [
       "A 3D mystery adventure mobile game designed to practice reading comprehension through interactive puzzles, NPC interactions, and dynamic storytelling. Developed in Unity3D.",
     longDescription:
       "Enigmatika is an innovative 3D mystery adventure game designed to enhance reading comprehension skills through engaging gameplay. Players navigate through a richly detailed world, solving puzzles and interacting with NPCs to uncover the story's mysteries. The game adapts to the player's reading level, gradually increasing in complexity as they progress.\n\nThe narrative is carefully crafted to incorporate educational elements without sacrificing entertainment value. Players must read and comprehend clues, dialogue, and environmental storytelling to advance through the game. The puzzles are designed to test not just reading comprehension but also critical thinking and problem-solving skills.\n\nThe development process involved extensive collaboration with educators to ensure the game's educational value while maintaining an engaging player experience. Character models and environments were created in Blender, with animations sourced from Mixamo to create realistic character movements. The game features a dynamic soundtrack that adapts to gameplay situations, enhancing immersion.",
+    researchPaperUrl:
+      "https://docs.google.com/document/d/14wsxHrf9u_Rxp6c9JsdR_ZXARXoWyzFT/edit?usp=sharing&ouid=117131715797188521248&rtpof=true&sd=true",
     videoUrl: "https://youtu.be/oOecBPA6JKk",
     githubUrl: "https://github.com/jjmalupet2002/Enigmatika_Version_Control",
     stack: ["Unity3D", "C#", "Blender", "Mixamo", "Adobe Photoshop", "FMOD", "ProBuilder"],
@@ -166,6 +168,48 @@ const projectsData = [
       },
     ],
     date: "May 2025",
+    impactData: [
+      {
+        title: "Reading Comprehension Improvement",
+        image: "/images/enigmatika/statistical-analysis.png",
+        metrics: [
+          "Significant improvement in pre- and post-test evaluations (p = 0.166)",
+          "Enhanced detail identification and vocabulary understanding",
+          "Average post-test score increased from 15.60 to 19.00",
+          "Reduced score variability indicating consistent learning gains",
+        ],
+      },
+      {
+        title: "Quality Evaluation Excellence",
+        image: "/images/enigmatika/iso-evaluation.png",
+        metrics: [
+          "Achieved 4.76/6.0 average quality score (ISO 25010 framework)",
+          "High ratings across usability, reliability, and security metrics",
+          "Strong approval from instructors and IT professionals",
+          "Exceeded industry standards for educational software quality",
+        ],
+      },
+      {
+        title: "Student Engagement Success",
+        image: "/images/enigmatika/student-testing.jpeg",
+        metrics: [
+          "Successfully engaged students through game-based learning",
+          "Supplemented Catch-Up Friday literacy activities effectively",
+          "Increased student motivation and retention rates",
+          "Positive feedback from pilot test participants",
+        ],
+      },
+      {
+        title: "Educational Integration Validation",
+        image: "/images/enigmatika/mobile-gameplay.png",
+        metrics: [
+          "Validated effectiveness with senior high school students",
+          "Proven integration potential for future literacy initiatives",
+          "Mobile-optimized design supports classroom and home use",
+          "Scalable solution for educational technology adoption",
+        ],
+      },
+    ],
   },
   {
     id: "repmind",
@@ -374,7 +418,8 @@ const projectsData = [
     longDescription:
       "This penetration testing project demonstrates practical exploitation of web application vulnerabilities through Shell Upload and Stored Cross-Site Scripting (XSS) attacks. The target system was a website named HealHub, hosted on InfinityFree. The attacks focused on the Contact Form and Admin Page, exposing the risks of improper input validation and insecure file upload mechanisms.\n\nThe project involved multiple attack vectors including reverse shell upload through vulnerable file upload functionality, remote command execution on the target server, and stored XSS attacks to steal administrative session cookies. Through careful reconnaissance and exploitation, the project demonstrated how attackers can gain unauthorized access to sensitive administrative functions.\n\nThis ethical hacking exercise highlighted the critical importance of secure coding practices, proper input sanitization, and robust access controls to protect web applications from common but severe security threats. The findings provide valuable insights for developers and security professionals on implementing effective security measures.",
     videoUrl: "https://youtu.be/hDw7Zkefdpw",
-    githubUrl: "https://www.canva.com/design/DAGYlrvMgWk/5XCjkijwl3ogWKq2z1BLug/view?utm_content=DAGYlrvMgWk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he1e108254f",
+    githubUrl:
+      "https://www.canva.com/design/DAGYlrvMgWk/5XCjkijwl3ogWKq2z1BLug/view?utm_content=DAGYlrvMgWk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he1e108254f",
     stack: ["PHP", "JavaScript", "Netcat", "Kali Linux", "Reverse Shells", "XSS", "InfinityFree", "revshells.com"],
     clientImage: "/images/enigmatika/tip-logo.jpeg",
     clientName: "Technological Institute of the Philippines",
@@ -538,6 +583,131 @@ function FeaturesSection({ features }: { features: any[] }) {
   )
 }
 
+// Output and Impact Carousel Component
+function OutputImpactCarousel({ impactData }: { impactData: any[] }) {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isHovered, setIsHovered] = useState(false)
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % impactData.length)
+  }
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + impactData.length) % impactData.length)
+  }
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index)
+  }
+
+  return (
+    <div className="space-y-6">
+      <div className="text-center">
+        <h2 className="text-3xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200">
+          💥 Output & Impact
+        </h2>
+        <p className="text-gray-400">Measurable outcomes and educational impact</p>
+        <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-purple-200 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div className="bg-gray-900/30 backdrop-blur-sm border border-gray-800/50 rounded-xl overflow-hidden">
+        {/* Main Carousel Display */}
+        <div className="relative">
+          <div
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {impactData.map((impact, index) => (
+              <div key={index} className="w-full flex-shrink-0">
+                <div className="flex flex-col lg:flex-row min-h-[400px]">
+                  {/* Image Section - 50% width on desktop */}
+                  <div className="lg:w-1/2 relative overflow-hidden bg-gray-800/50">
+                    <Image
+                      src={impact.image || "/placeholder.svg"}
+                      alt={impact.title}
+                      width={600}
+                      height={400}
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-transparent"></div>
+                  </div>
+
+                  {/* Content Section - 50% width on desktop */}
+                  <div className="lg:w-1/2 p-8 flex flex-col justify-center">
+                    <div
+                      className="transform transition-all duration-500"
+                      onMouseEnter={() => setIsHovered(true)}
+                      onMouseLeave={() => setIsHovered(false)}
+                    >
+                      {/* Accent Line */}
+                      <div className="w-16 h-1 bg-gradient-to-r from-purple-400 to-purple-200 mb-4 rounded-full"></div>
+
+                      {/* Title */}
+                      <h3 className="text-2xl font-bold text-gray-200 mb-6 leading-tight">{impact.title}</h3>
+
+                      {/* Metrics */}
+                      <div className="space-y-4">
+                        {impact.metrics.map((metric: string, metricIndex: number) => (
+                          <div
+                            key={metricIndex}
+                            className={cn(
+                              "flex items-start gap-3 transform transition-all duration-300",
+                              isHovered && `translate-x-2 transition-delay-${metricIndex * 100}`,
+                            )}
+                          >
+                            <div className="w-2 h-2 bg-purple-400 rounded-full mt-3 flex-shrink-0"></div>
+                            <p className="text-gray-300 text-lg leading-relaxed">{metric}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-900/70 backdrop-blur-sm text-purple-400 p-3 rounded-full hover:bg-gray-800/70 hover:scale-110 transition-all duration-300 z-10"
+            aria-label="Previous impact"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-900/70 backdrop-blur-sm text-purple-400 p-3 rounded-full hover:bg-gray-800/70 hover:scale-110 transition-all duration-300 z-10"
+            aria-label="Next impact"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+        </div>
+
+        {/* Slider Indicators */}
+        <div className="p-6 bg-gray-800/30 border-t border-gray-700/50">
+          <div className="flex justify-center space-x-3">
+            {impactData.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={cn(
+                  "w-4 h-4 rounded-full transition-all duration-300 hover:scale-110",
+                  currentIndex === index
+                    ? "bg-purple-400 scale-110 shadow-[0_0_10px_rgba(168,85,247,0.5)]"
+                    : "bg-gray-600 hover:bg-gray-500",
+                )}
+                aria-label={`Go to impact ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function ProjectDetail({ params }: { params: { id: string } }) {
   const router = useRouter()
   const [mounted, setMounted] = useState(false)
@@ -627,6 +797,25 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
             </div>
           </div>
 
+          {/* Research Paper Link */}
+          {project.id === "enigmatika" && project.researchPaperUrl && (
+            <div className="bg-gray-900/30 backdrop-blur-sm border border-gray-800/50 rounded-xl p-6">
+              <h2 className="text-2xl font-semibold mb-4 text-purple-400">Research Paper</h2>
+              <p className="text-gray-300 mb-4">
+                For detailed methodology, analysis, and findings, please refer to our comprehensive research paper.
+              </p>
+              <a
+                href={project.researchPaperUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-purple-400 text-gray-900 font-medium px-6 py-3 rounded-full hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all duration-300"
+              >
+                <FileText className="h-5 w-5" />
+                <span>View Research Paper</span>
+              </a>
+            </div>
+          )}
+
           {/* Features Section */}
           {project.features && <FeaturesSection features={project.features} />}
 
@@ -679,6 +868,11 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
 
           {/* Gallery Carousel Section */}
           <GalleryCarousel images={project.gallery} descriptions={project.galleryDescriptions || []} />
+
+          {/* Output and Impact Section */}
+          {project.id === "enigmatika" && project.impactData && (
+            <OutputImpactCarousel impactData={project.impactData} />
+          )}
 
           {/* Call to Action */}
           <div className="flex justify-center pt-8">
