@@ -56,13 +56,13 @@ export default function Contact() {
     {
       icon: <Linkedin className="h-5 w-5 text-purple-400" />,
       label: "LinkedIn",
-      value: "linkedin.com/in/ayushjha23",
+      value: "linkedin.com/in/josef-medel",
       link: "www.linkedin.com/in/josef-johrel-medel-131570312",
     },
     {
       icon: <Github className="h-5 w-5 text-purple-400" />,
       label: "GitHub",
-      value: "github.com/AyushRajJha",
+      value: "github.com/jjmalupet2002",
       link: "https://github.com/jjmalupet2002?tab=overview&from=2025-06-01&to=2025-06-08",
     },
   ]
