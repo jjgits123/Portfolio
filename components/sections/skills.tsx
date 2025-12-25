@@ -16,12 +16,12 @@ export default function Skills() {
     {
       icon: <Code className="h-6 w-6" />,
       title: "Languages",
-      skills: ["C#", "ReactJS", "Ruby on Rails", "Bash"],
+      skills: ["Type Script", "React", "Ruby on Rails", "Node.js"],
     },
     {
       icon: <Server className="h-6 w-6" />,
       title: "Technologies",
-      skills: ["Git", "Docker", "NodeJS", "Unity3D"],
+      skills: ["Git", "Docker", "AWS", "Mern Stack"],
     },
     {
       icon: <Palette className="h-6 w-6" />,

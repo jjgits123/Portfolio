@@ -15,7 +15,7 @@ export default function Projects() {
   const projects = [
     {
       id: "company-services",
-      title: "Company Services: A Full Stack Sales Crediting Web App",
+      title: "Company Services: Full Stack Sales Crediting Web App",
       description:
         "A full-stack enterprise platform developed in a collaborative environment for a leading pharmaceutical company. The app includes modules for Sales Crediting, Product Complaints, and Admin Tools, with features such as dynamic forms, PDF export, role-based access, and dashboard analytics. Employed RESTful APIs, Agile development practices, and production-ready deployment workflows.",
       date: "March 2025",
